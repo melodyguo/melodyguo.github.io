@@ -6,7 +6,7 @@
 
 [Bayes Classifier](https://melodyguo.github.io/projects/bayes.html)
 
-[Retail Database](https://melodyguo.github.io/projects/retail.html)
+[Four Color Theorem](https://melodyguo.github.io/projects/color.html)
 
 ### Languages
 - Python

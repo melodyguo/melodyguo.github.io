@@ -66,4 +66,4 @@ make_that_tree("wine.dot", data, target,
                       "Proline"],
                      ["Wine 1", "Wine 2", "Wine 3"])
 ```
-![wine tree](/images/wine/jpeg)
+![wine tree](/images/wine.jpeg)

@@ -1,6 +1,6 @@
 # Decision Trees
 
-I did some work with decisions trees to analyze trends in patient data. Since the patient data is classified, here is some sample code that I ran on a public data set.
+I did some work analyzing patient data using decision trees in Python. Since the patient data is classified, here is some sample code that I ran on some public data sets.
 
 ```markdown
 from sklearn import tree

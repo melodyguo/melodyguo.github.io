@@ -74,3 +74,88 @@ string mostprob(set<string> adj, map<string, vector<set<string>>> naive, int tot
     return probobj;
 }
 ```
+
+In my 'main()' I am taking in three input files, "train.txt" which is the data that trains the classifier, "classify.txt" which contains the sets of adjectives for which we determine the most probable objects for, and "output.txt" where we output the most probable objects.
+
+```
+int main(int argc, char* argv[]) {
+    // check that there are enough arguments
+    if (argc < 4) {
+        cout << "missing input/output files" << endl;
+        return 0;
+    }
+
+    // CONTAINER: string object that maps to a vector holding groups of adjectives
+    map<string, vector<set<string>>> naive;
+
+    string line;
+    int totalobjs;
+
+    // read train.txt
+    stringstream tstream;
+    ifstream train(argv[1]);
+    getline(train, line);
+    tstream << line;
+    tstream >> totalobjs;
+
+    for (int i = 0; i < totalobjs; i++) {
+        getline(train, line);
+        stringstream ss(line);  // apple mushy crisp red
+
+        // get the fruit
+        string object;
+        ss >> object;
+
+        // get fruit adjectives
+        set<string> adj;
+        string temp;
+        while (ss >> temp) {
+            adj.insert(temp);
+        }
+
+        // add fruits and adjectives to container
+        if (naive.count(object) < 1) {
+            vector<set<string>> adjects;
+            adjects.push_back(adj);
+            naive.insert(make_pair(object, adjects));
+        } else {
+            vector<set<string>> adjects = naive.at(object);
+            adjects.push_back(adj);
+            naive.at(object) = adjects;
+        }
+    }
+
+    // read classify.txt and write to output.txt
+    ofstream output(argv[3]);
+
+    stringstream cstream;
+    ifstream classify(argv[2]);
+    getline(classify, line);
+    cstream << line;
+    int n;
+    cstream >> n;
+
+    for (int i = 0; i < n; i++) {
+        getline(classify, line);
+        stringstream ss(line);
+
+        // get adjectives
+        set<string> adj;
+        string temp;
+        while (ss >> temp) {
+            adj.insert(temp);
+        }
+
+        // write most probable fruit to output.txt
+        if (i == n - 1) {
+            // just to make sure there isn't a new line at the end of the output file
+            output << mostprob(adj, naive, totalobjs);
+        } else {
+            output << mostprob(adj, naive, totalobjs) << endl;
+        }
+    }
+    output.close();
+
+    return 1;
+}
+```

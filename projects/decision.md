@@ -54,7 +54,7 @@ make_that_tree("iris.dot", data, target,
                       "petal length in cm ", "petal width in cm"],
                      ["Iris Setosa", "Iris Versicolour", "Iris Virginica"])
 ```
-![Image]()
+![iris tree](/images/iris.jpeg)
 
 ```
 data, target = process_data("wine.data", "beg")
@@ -66,4 +66,4 @@ make_that_tree("wine.dot", data, target,
                       "Proline"],
                      ["Wine 1", "Wine 2", "Wine 3"])
 ```
-![Image]()
+![wine tree](/images/wine/jpeg)

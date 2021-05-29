@@ -4,6 +4,10 @@
 # PROJECTS
 [Decision Trees](https://melodyguo.github.io/projects/decision.html)
 
+[Bayes Classifier](https://melodyguo.github.io/projects/bayes.html)
+
+[Retail Database](https://melodyguo.github.io/projects/retail.html)
+
 ### Languages
 - Python
 - Java
@@ -12,8 +16,8 @@
 
 
 # CONTACT ME
-Email:
+Email: melodygu@usc.edu
 
-Linkedin:
+Linkedin: www.linkedin.com/in/guomelody
 
-Github:
+Github: www.github.com/melodyguo

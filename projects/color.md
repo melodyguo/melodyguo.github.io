@@ -1,5 +1,5 @@
 # Four Color Theorem
-The four color theorem states that no more than four colors are needed to color a map so that no two adjacent countries/regions have the same color.
+The four color theorem states that no more than four colors are needed to color a map so that no two adjacent regions have the same color.
 
 ![USA](/images/colorusa.png)
 

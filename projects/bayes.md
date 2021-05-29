@@ -1,7 +1,8 @@
 # Bayes Classifier
 I wrote a Naive Bytes classifier in C++ which uses Bayes theorem and Laplace smoothing to determine the most likely object given a set of adjectives.
 
-![bayes theorem]()
+![bayes theorem](bayes.jpeg)
+
 I used the extended form of Bayes theorem shown above
 
 This helper function counts the occurences of object AND adjective (i.e. apple AND mushy) 
